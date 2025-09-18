@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>source-code-management-scm-project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="card-header">
+        <h1>Source Code Management — SCM Project</h1>
+        <p class="subtitle">Project details and contact</p>
+      </header>
+
+      <dl class="details">
+        <div class="row">
+          <dt>Name</dt>
+          <dd>Tunmise Adesanya</dd>
+        </div>
+
+        <div class="row">
+          <dt>Email</dt>
+          <dd><a href="mailto:tunmise216@gmail.com">tunmise216@gmail.com</a></dd>
+        </div>
+
+        <div class="row">
+          <dt>Phone</dt>
+          <dd><a href="tel:+2349167763665">09167763665</a></dd>
+        </div>
+
+        <div class="row">
+          <dt>Project Title</dt>
+          <dd>source-code-management-scm-project</dd>
+        </div>
+
+        <div class="row">
+          <dt>Date</dt>
+          <dd>04/07/2025</dd>
+        </div>
+
+        <div class="row">
+          <dt>Description</dt>
+          <dd>
+            <p>Simple project showcasing Git-based source code management and a sample HTML form/css layout.</p>
+          </dd>
+        </div>
+
+        <div class="row">
+          <dt>Status</dt>
+          <dd><span class="status">In Progress</span></dd>
+        </div>
+      </dl>
+
+      <footer class="card-footer">
+        <button class="btn" id="downloadBtn">Download HTML</button>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    // Optional: small helper to download the HTML file as-is (useful for demos)
+    document.getElementById('downloadBtn').addEventListener('click', function () {
+      const content = `<!doctype html>\n<html lang="en">\n<meta charset="utf-8">\n<title>source-code-management-scm-project</title>\n<link rel="stylesheet" href="style.css">\n\n<body>\n` + document.querySelector('.card').outerHTML + `\n</body>\n</html>`;
+      const blob = new Blob([content], {type: 'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'form.html';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>
